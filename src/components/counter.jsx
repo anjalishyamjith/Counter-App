@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 
 class Counter extends Component {
@@ -6,8 +5,7 @@ class Counter extends Component {
     count: 0,
   };
 
-  handleIncrement = (product) => {
-    console.log(product);
+  handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
   };
 
@@ -16,8 +14,7 @@ class Counter extends Component {
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          // eslint-disable-next-line no-undef
-          onClick={() => this.handleIncrement(product)}
+          onClick={this.handleIncrement}
           className="btn btn-secondary btn-sm"
         >
           Increment
